@@ -23,13 +23,20 @@
     > 小编在这里建议大家，使用一款从剪贴板直接上传图像到[sm.ms](https://sm.ms)的VS code插件。可以直接生成MD文件需要的格式和路径（十分好用）
 ### 如何将部署到GitHub上?
 在根目录下输入如下命令:
+
 `hexo clean`
+
 `hexo g`
+
 会生成一个名为public的文件夹
+
 之后将public文件夹中的文件全部复制到该仓库存放的文件夹下
+
 接着使用GitHub DeskTop软件上传到github就行了
+
 ### hexo-theme-stun主题
 小编在这里要特别介绍hexo-theme-stun主题里面的**Bootstrap** 标注
+
 **语法如下**
 ```markdown
 {% note [type] [no-icon] %}
