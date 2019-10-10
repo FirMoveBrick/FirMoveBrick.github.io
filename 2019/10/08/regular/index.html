@@ -16,34 +16,215 @@ var CONFIG = {
   prompt: {"copy_success":"Copy Success","copy_error":"Copy Error","creative_commons":"Creative Commons","copy_button":"Click to Copy"}
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>Home</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>Categories</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/tags/"><i class="fa fa-tags"></i>Tags</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">FirMoveBrick</div><div class="header-info-subtitle">好好学习，天天打码，遵纪守法，热爱生活</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content"><div class="post"><header class="post-header"><h1 class="post-header-title">正则表达式</h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-10-08</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-10-08</span></span><span class="post-header-meta-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>609</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>Reading time </span><span>3m</span></span></div></header><div class="post-body"><p>正则表达式，从入门到放弃。   我太难啦<del>~</del></p>
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>Home</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>Categories</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/tags/"><i class="fa fa-tags"></i>Tags</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">FirMoveBrick</div><div class="header-info-subtitle">好好学习，天天打码，遵纪守法，热爱生活</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content"><div class="post"><header class="post-header"><h1 class="post-header-title">正则表达式</h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-10-08</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-10-10</span></span><span class="post-header-meta-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>1.6k</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>Reading time </span><span>9m</span></span></div></header><div class="post-body"><p>正则表达式，从入门到放弃。   我太难啦<del>~</del></p>
 <p>一段时间没用，基本就全忘光了，所以学习要养成作笔记的习惯，卑微的我这不就来开始补做笔记写博客啦。</p>
 <h3 id="介绍"><span class="heading-link">介绍</span></h3><p>PHP支持两种风格的正则表达式语法： POSIX 和 Perl。</p>
 <p>这两种表达式是编译PHP时指定的默认风格，但在PHP5.3之后，POSIX风格被弃用。</p>
-<h3 id="基础知识"><span class="heading-link">基础知识</span></h3><p>正则表达式是一种描述文本所包含模式的方法。</p>
+<h3 id="常用的正则匹配工具"><span class="heading-link">常用的正则匹配工具</span></h3><p>在线匹配工具</p>
+<ol>
+<li><span class="external-link"><a href="http://www.regexpal.com/" target="_blank" rel="noopener">http://www.regexpal.com/</a><i class="fa fa-external-link"></i></span> </li>
+<li><span class="external-link"><a href="http://rubular.com/" target="_blank" rel="noopener">http://rubular.com/</a><i class="fa fa-external-link"></i></span> <a id="more"></a>
+
+</li>
+</ol>
+<h3 id="基础知识介绍"><span class="heading-link">基础知识介绍</span></h3><p>正则表达式是一种描述文本所包含模式的方法。</p>
 <p>在PHP中，匹配正则表达式更像<code>strstr()</code>函数匹配，而不像相等比较，因为是在一个字符串的某个位置（如果不指明则可能在字符串中的任何位置）匹配另一个字符串。<br>例： 字符串<code>shop</code>匹配正则表达式<code>shop</code>，它也可以匹配正则表达式<code>h</code>、<code>ho</code>等正则表达式。</p>
 <p>除了精确匹配字符外，还可以用特殊字符来指定表达式的元意义（meta-meaning）<br>好了 巴拉巴拉说这么多基础理念小编自己看着也烦，接下来就让直接进入正题吧！</p>
-<a id="more"></a>
-<h4 id="分隔符"><span class="heading-link">分隔符</span></h4><ol>
-<li><p>分隔符 “ / ”</p>
-<div class="note-plugin warning no-icon">
+<h4 id="基本字符介绍"><span class="heading-link">基本字符介绍</span></h4><ol>
+<li>分隔符 “ / ”<div class="note-plugin warning no-icon">
             <p>每个表达式必须包含在一対分隔符中，字符串的开始和结束都必须要有匹配的分隔符。</p>
           </div>
-<p>例： 编写一个匹配<code>shop</code>的正则表达式 : <code>/shop/</code></p>
-</li>
-<li><p>转义字符 “ \ ” ，<br>例： 如果要在正则表达式匹配字符“ <code>/</code> ”则使用“ <code>\</code> ”来转义 ： <code>/http:\/\//</code></p>
-</li>
-<li><p>模式修饰符 “ i ”</p>
-<div class="note-plugin warning no-icon">
+例： 编写一个匹配<code>shop</code>的正则表达式 : <code>/shop/</code></li>
+<li>模式选择 “ | ” （选择分支的开始（读为或））<br>例：<code>/com|edu|net/</code>匹配com、edu或net字符串</li>
+<li>模式修饰符 “ i ”<div class="note-plugin warning no-icon">
             <p>使用模式修饰符 将以不区分大小写的方式匹配字符串。</p>
           </div>
-<p>例：不区分大小写的方式匹配<code>shop</code> 的正则表达式 <code>/shop/i</code></p>
+例：不区分大小写的方式匹配<code>shop</code> 的正则表达式 <code>/shop/i</code></li>
+<li>方括号字符 “ [] ”<br>例如： <code>/[a-z]at/</code> 表示限定第一个字符必须是<code>a-z</code>之间的字符。</li>
+<li>脱字符号 “ ^ ”<div class="note-plugin warning">
+            <p><strong>注意</strong><br>脱字符号<code>^</code>用于正则表达式的开始，表示子字符串必须出现在被搜索字符串的开始处； 当脱字符号<code>^</code>在方括号里面时，表示否;在下面两张表中会具体介绍例子</p>
+          </div>
+
 </li>
 </ol>
-<h4 id="字符类和类型"><span class="heading-link">字符类和类型</span></h4><p>使用<strong>字符集合</strong>可以使得正则表达式的能力立即超过精确表达式的能力。</p>
-<ol>
-<li>字符 “ . ”<br>可以理解为<code>.</code>就是实现模糊查找，通常这种匹配符适用于<strong>操作系统</strong>的文件名匹配<br>例如： /.at/<br>可以匹配<code>cat</code>、<code>sat</code>、<code>mat</code>等字符串</li>
-<li>方括号字符 “ [] ”</li>
-</ol>
-<p>说了这么多，是不是还是一头雾水，此时此刻在写博客的我也是，虽然说多写多看多用就会了，但是小编还是不会，只能看懂，稍微会写一点而已，所以很多时候我都是直接找百度搜寻我需要的正则表达式（虽然有点丢人，但是小编很诚实）。</p>
-</div><footer class="post-footer"><div class="post-end"><span>------ </span><span>End of text, thank you for reading</span><span> ------</span></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-author-name">Author: </span><span class="post-copyright-author-value"><a href="http://yoursite.com">FirMoveBrick</a></span></div><div class="post-copyright-link"><span class="post-copyright-link-name">Link: </span><span class="post-copyright-link-value"><a href="http://yoursite.com/2019/10/08/regular/">http://yoursite.com/2019/10/08/regular/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-notice-name">Copyright: </span><span class="post-copyright-notice-value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="http://yoursite.com/tags/PHP/">PHP</a></span><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="http://yoursite.com/tags/正则表达式/">正则表达式</a></span></div><nav class="paginator"><div class="paginator-post"><div class="paginator-post-next"><a class="paginator-post-next__a" href="/2019/10/03/PHP-time/"><span>基于微信朋友圈实现时间显示样式</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础知识"><span class="toc-number">2.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#分隔符"><span class="toc-number">2.1.</span> <span class="toc-text">分隔符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类和类型"><span class="toc-number">2.2.</span> <span class="toc-text">字符类和类型</span></a></li></ol></li></ol></div></section><!-- ov = overview --><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/favicon-32x32.png" alt="avatar"></div><p class="sidebar-ov-author__p">PHP is the best language in the world</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://github.com/" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-github"></i></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">5</div><div class="sidebar-ov-state__a--name">Archives</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">Categories</div></a><a class="sidebar-ov-state__a tags" href="/tags/"><div class="sidebar-ov-state__a--count">6</div><div class="sidebar-ov-state__a--name">Tags</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span>You have read </span><span class="sidebar-reading-info-num">0</span></div><div class="sidebar-reading-line"></div></div></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart footer-icon"></span><span>FirMoveBrick.</span></div><div><span>Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.5.2.</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-rocket"></i></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="/js/utils.js?v=1.5.2"></script><script src="/js/stun-boot.js?v=1.5.2"></script><script src="/js/scroll.js?v=1.5.2"></script><script src="/js/header.js?v=1.5.2"></script><script src="/js/sidebar.js?v=1.5.2"></script></body></html>
+<h4 id="在PCRE正则表达式中，用于方括号外面的特殊字符"><span class="heading-link">在PCRE正则表达式中，用于方括号外面的特殊字符</span></h4><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="left">意义</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">“ \ ”</td>
+<td align="left">转移字符</td>
+<td align="left">在正则表达式匹配字符 <code>/</code> 则使用<code>\</code> 来转义 ： <code>/http:\/\//</code></td>
+</tr>
+<tr>
+<td align="center">“ ^ ”</td>
+<td align="left">在字符开始处匹配</td>
+<td align="left"><code>/^[a-z]$/</code> 匹配只包含<code>a-z</code>之间一个字符的字符串。</td>
+</tr>
+<tr>
+<td align="center">“ $ ”</td>
+<td align="left">在字符末尾处处匹配</td>
+<td align="left"><code>/com$/</code> 匹配将以<code>com</code>为结束的字符串。</td>
+</tr>
+<tr>
+<td align="center">“ . ”</td>
+<td align="left">匹配除换行符( \n )之外的字符</td>
+<td align="left"><code>/.at/</code>可以匹配<code>cat</code>、<code>sat</code>、<code>mat</code>等字符串,<strong>适用于操作系统的文件名匹配</strong></td>
+</tr>
+<tr>
+<td align="center">“（）”</td>
+<td align="left">子模式</td>
+<td align="left"><code>/(very )*large/</code>可以匹配“large”、“very large”、“very very large”</td>
+</tr>
+<tr>
+<td align="center">“ * ”</td>
+<td align="left">重复出现0次或多次</td>
+<td align="left"><code>[[:alnum:]]*</code> 表示没有或多个字母字符</td>
+</tr>
+<tr>
+<td align="center">“ + ”</td>
+<td align="left">重复出现1次或多次</td>
+<td align="left"><code>[[:alnum:]]+</code> 表示至少有一个字母字符</td>
+</tr>
+<tr>
+<td align="center">“ ? ”</td>
+<td align="left">重复出现1次或0次</td>
+<td align="left"><code>[[:alnum:]]？</code> 表示有零个或一个字母字符</td>
+</tr>
+<tr>
+<td align="center">“{ }”</td>
+<td align="left">最小/最大量记号</td>
+<td align="left">{3}表示重复三次；{2,4}重复2~4次；{2， }表示至少要重复两次。 <code>/(very ){1,3}/</code>表示匹配“very”，“very very”，“very very very”</td>
+</tr>
+</tbody></table></div>
+<h4 id="在PCRE正则表达式中，用于方括号里面的特殊字符"><span class="heading-link">在PCRE正则表达式中，用于方括号里面的特殊字符</span></h4><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="left">意义</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">“ \ ”</td>
+<td align="left">转义字符</td>
+<td align="left">在正则表达式匹配字符 <code>/</code> 则使用<code>\</code> 来转义 ： <code>/[http:\/\//]</code></td>
+</tr>
+<tr>
+<td align="center">“ ^ ”</td>
+<td align="left">非，仅开始处使用</td>
+<td align="left"><code>/[^a-z]/</code>  匹配任何不在<code>a-z</code>之间的字符</td>
+</tr>
+<tr>
+<td align="center">“ - ”</td>
+<td align="left">用于指定符号的范围</td>
+<td align="left"><code>/[a-zA-Z]/</code> 这个范围集代表大小写的任何字母。</td>
+</tr>
+</tbody></table></div>
+<h4 id="用于PCRE风格正则表达式的字符类"><span class="heading-link">用于PCRE风格正则表达式的字符类</span></h4><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">类</th>
+<th align="left">匹配</th>
+<th align="center">类</th>
+<th align="left">匹配</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">[[:alnum:]]</td>
+<td align="left">文字数字字符</td>
+<td align="center">[[:punct:]]</td>
+<td align="left">标点字符</td>
+</tr>
+<tr>
+<td align="center">[[:alpha:]]</td>
+<td align="left">字母字符</td>
+<td align="center">[[:blank:]]</td>
+<td align="left">制表符和空格</td>
+</tr>
+<tr>
+<td align="center">[[:asci:]]</td>
+<td align="left">ASCLL字符</td>
+<td align="center">[[:lower:]]</td>
+<td align="left">小写字母</td>
+</tr>
+<tr>
+<td align="center">[[:space:]]</td>
+<td align="left">空白字符</td>
+<td align="center">[[:upper:]]</td>
+<td align="left">大写字母</td>
+</tr>
+<tr>
+<td align="center">[[:cntrl:]]</td>
+<td align="left">控制符</td>
+<td align="center">[[:digit:]]</td>
+<td align="left">小数</td>
+</tr>
+<tr>
+<td align="center">[[:print:]]</td>
+<td align="left">所有可打印的字符</td>
+<td align="center">[[:xdigit:]]</td>
+<td align="left">十六进制小数</td>
+</tr>
+<tr>
+<td align="center">[[:graph:]]</td>
+<td align="left">除空格外所有可打印的字符</td>
+<td align="center">[[:word:]]</td>
+<td align="left">“word”字符（字母数字或下划线）</td>
+</tr>
+</tbody></table></div>
+<h4 id="PCRE正则表达式的特殊字符类型"><span class="heading-link">PCRE正则表达式的特殊字符类型</span></h4><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">字符类型</th>
+<th align="left">含义</th>
+<th align="center">字符类型</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\d</td>
+<td align="left">十进制数字</td>
+<td align="center">\S</td>
+<td align="left">任意非空白字符</td>
+</tr>
+<tr>
+<td align="center">\D</td>
+<td align="left">任意非十进制数字</td>
+<td align="center">\v</td>
+<td align="left">垂直空白字符</td>
+</tr>
+<tr>
+<td align="center">\h</td>
+<td align="left">水平空白字符</td>
+<td align="center">\V</td>
+<td align="left">任意非垂直空白字符</td>
+</tr>
+<tr>
+<td align="center">\H</td>
+<td align="left">任意非水平空白字符</td>
+<td align="center">\w</td>
+<td align="left">单词字符（字母、数字、下划线）</td>
+</tr>
+<tr>
+<td align="center">\s</td>
+<td align="left">空白字符</td>
+<td align="center">\W</td>
+<td align="left">任意非单词字符</td>
+</tr>
+</tbody></table></div>
+<h3 id="回溯引用"><span class="heading-link">回溯引用</span></h3><p>回溯引用（backreference,也叫反向引用），非PHP程序员一般会放弃学习和使用，我也快放弃了（哭唧唧）。</p>
+<div class="note-plugin success no-icon">
+            <p>模式的回溯引用是通过一个反斜杠加一个数字（根据上下文不同，也可能多个数字）</p><p>它用来匹配多次出现在一个字符串中的相同子表达式，而不用指定要具体匹配的内容</p>
+          </div>
+<p>例： /1是表示第一个子模式回调引用；/2则是第二个子模式回调引用<br><img src="/images/loading.svg" alt="微信图片_20191010144122.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/10/mdH8YOnScvhTQqC.png"><br><img src="/images/loading.svg" alt="1e5ae1ddbbaaf64c829d05d9af663c7.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/10/DluzGKHQSJBTVYf.png"></p>
+<h3 id="在邮箱验证中应用"><span class="heading-link">在邮箱验证中应用</span></h3><p>验证邮箱正则表达式：<code>/^[a-zA-Z0-9_\-.]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-]*[\.a-zA-Z0-9]{2,6}+$/</code></p>
+<p>子表达式<code>/^[a-zA-Z0-9_\-.]+</code>表示“至少由一个或多个字母、数字、下划线、连字符、点号组成并且作为整个字符串开始的字符串”。<strong>请注意，当“.”用在一个字符类的开始或结束处时，它将失去其特殊通配符的意义，只能成为一个点号字符。</strong><br>符号<code>@</code>匹配字符“@”。<br>子表达式<code>[a-zA-Z0-9\-]+</code>与由字母、数字字符和连字符组成的主机名相匹配。请注意，在这里，我们去除了连字符，因为它是方括号内的特殊字符。<br>字符组合<code>\.</code>匹配“.”字符。我们在字符类<strong>外部</strong>使用点号，因此必须对其转义，使其能够匹配一个点号字符。<br>子表达式<code>[a-zA-Z0-9\-]</code>匹配域名剩余部分，它包含字母、数字和连字符。<br>子表达式<code>*[\.a-zA-Z0-9]{2,6}+$/</code>匹配域名剩余部分，它包含字母、数字和连字符。最后的子表达式最多只能存在2-6个字符，或者不存在</p>
+<p>如图</p>
+<p><img src="/images/loading.svg" alt="1.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/10/bC9HZOPSJxTpK4w.png"></p>
+<p>好了，说了这么多，是不是还是一头雾水，虽然说多写多看多用就会了，但是小编还是不会，只能看懂，稍微会写一点而已，所以很多时候我都是直接找百度搜寻我需要的正则表达式（虽然有点丢人，但是小编很诚实）。</p>
+</div><footer class="post-footer"><div class="post-end"><span>------ </span><span>End of text, thank you for reading</span><span> ------</span></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-author-name">Author: </span><span class="post-copyright-author-value"><a href="http://yoursite.com">FirMoveBrick</a></span></div><div class="post-copyright-link"><span class="post-copyright-link-name">Link: </span><span class="post-copyright-link-value"><a href="http://yoursite.com/2019/10/08/regular/">http://yoursite.com/2019/10/08/regular/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-notice-name">Copyright: </span><span class="post-copyright-notice-value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="http://yoursite.com/tags/PHP/">PHP</a></span><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="http://yoursite.com/tags/正则表达式/">正则表达式</a></span></div><nav class="paginator"><div class="paginator-post"><div class="paginator-post-next"><a class="paginator-post-next__a" href="/2019/10/03/PHP-time/"><span>基于微信朋友圈实现时间显示样式</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的正则匹配工具"><span class="toc-number">2.</span> <span class="toc-text">常用的正则匹配工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础知识介绍"><span class="toc-number">3.</span> <span class="toc-text">基础知识介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本字符介绍"><span class="toc-number">3.1.</span> <span class="toc-text">基本字符介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在PCRE正则表达式中，用于方括号外面的特殊字符"><span class="toc-number">3.2.</span> <span class="toc-text">在PCRE正则表达式中，用于方括号外面的特殊字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在PCRE正则表达式中，用于方括号里面的特殊字符"><span class="toc-number">3.3.</span> <span class="toc-text">在PCRE正则表达式中，用于方括号里面的特殊字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#用于PCRE风格正则表达式的字符类"><span class="toc-number">3.4.</span> <span class="toc-text">用于PCRE风格正则表达式的字符类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PCRE正则表达式的特殊字符类型"><span class="toc-number">3.5.</span> <span class="toc-text">PCRE正则表达式的特殊字符类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回溯引用"><span class="toc-number">4.</span> <span class="toc-text">回溯引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在邮箱验证中应用"><span class="toc-number">5.</span> <span class="toc-text">在邮箱验证中应用</span></a></li></ol></div></section><!-- ov = overview --><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/favicon-32x32.png" alt="avatar"></div><p class="sidebar-ov-author__p">PHP is the best language in the world</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://github.com/" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-github"></i></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">5</div><div class="sidebar-ov-state__a--name">Archives</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">Categories</div></a><a class="sidebar-ov-state__a tags" href="/tags/"><div class="sidebar-ov-state__a--count">6</div><div class="sidebar-ov-state__a--name">Tags</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span>You have read </span><span class="sidebar-reading-info-num">0</span></div><div class="sidebar-reading-line"></div></div></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart footer-icon"></span><span>FirMoveBrick.</span></div><div><span>Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.5.2.</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-rocket"></i></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="/js/utils.js?v=1.5.2"></script><script src="/js/stun-boot.js?v=1.5.2"></script><script src="/js/scroll.js?v=1.5.2"></script><script src="/js/header.js?v=1.5.2"></script><script src="/js/sidebar.js?v=1.5.2"></script></body></html>
