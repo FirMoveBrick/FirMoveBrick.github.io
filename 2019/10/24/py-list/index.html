@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="FirMoveBrick, FirMoveBrick"><meta name="description"><title>Python基本数据结构 | FirMoveBrick</title><link rel="icon" href="/images/favicon-16x16.png?v=1.5.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/favicon-32x32.png?v=1.5.2" type="image/png" sizes="32x32"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=1.5.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontawesome: {"prefix":"fa"},
+  sidebar: {"offsetTop":"30px","renderTocDepth":4},
+  back2top: {"enable":true},
+  reward: false,
+  fancybox: true,
+  zoom_image: {"enable":true,"mask_color":"rgba(0,0,0,0.6)"},
+  gallery_waterfall: undefined,
+  lazyload: {"enable":true,"placeholder":"gif"},
+  pjax: undefined,
+  external_link: {"icon":{"enable":true,"name":"external-link"}},
+  shortcuts: {"switch_post":false},
+  prompt: {"copy_success":"Copy Success","copy_error":"Copy Error","creative_commons":"Creative Commons","copy_button":"Click to Copy"}
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>Home</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>Categories</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/tags/"><i class="fa fa-tags"></i>Tags</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">FirMoveBrick</div><div class="header-info-subtitle">好好学习，天天打码，遵纪守法，热爱生活</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content"><div class="post"><header class="post-header"><h1 class="post-header-title">Python基本数据结构</h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-10-24</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-10-24</span></span><span class="post-header-meta-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>837</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>Reading time </span><span>4m</span></span></div></header><div class="post-body"><h3 id="Python基本数据结构"><span class="heading-link">Python基本数据结构</span></h3><p>数据结构：通俗点儿说，就是存储数据的容器<br>格式如下：</p>
+<ul>
+<li>列表：<code>list = [val1, val2, val3, val4]</code>，用中括号；</li>
+<li>元组：<code>tuple = (val1, val2, val3, val4)</code>，用小括号；</li>
+<li>字典：<code>dict = {key1: val1, key2: val2, key3: val3}</code>，用大括号；</li>
+<li>集合：<code>set = {val1, val2, val3, val4}</code>，用大括号；</li>
+</ul>
+<a id="more"></a>
+<h4 id="列表"><span class="heading-link">列表</span></h4><p>list = [val1, val2, val3, val4]，列表最显著的特征是：</p>
+<ol>
+<li>列表中每个元素都是可变的；</li>
+<li>列表中元素是有序的，即每个元素都有一个位置；</li>
+<li>列表可以容纳Python的任何对象；</li>
+</ol>
+<ul>
+<li>列表遍历</li>
+</ul>
+<ol>
+<li>使用in操作符遍历。</li>
+<li>使用range（）或xrange（）函数遍历。</li>
+<li>使用iter（）函数遍历。它是一个迭代器函数。</li>
+<li>使用enumerate（）函数遍历。该函数用于遇历序列中的元素及其下标<br><img src="/images/loading.svg" alt="微信图片_20191024183824.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/24/DFZSoduz13AjcXC.png"><br><img src="/images/loading.svg" alt="微信图片_20191024183829.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/24/dLHZiDow3tNTaQg.png"></li>
+</ol>
+<ul>
+<li>列表新增</li>
+</ul>
+<ol>
+<li>append(obj)：在列表末尾添加新的元素。</li>
+<li>insert(index,obj)在index索引所指的位置添加新的元素</li>
+<li>extend()，在列表末尾添加多个元素</li>
+</ol>
+<ul>
+<li>列表删除</li>
+</ul>
+<ol>
+<li>remove(obj)，删除列表中某个值的第一个匹配项</li>
+<li>pop(index)，获取索引的位置并删除这个元素，<strong>如果pop()方法中没有指定索引，则默认删除最后一个元素</strong></li>
+<li>del(),删除元素，例：<code>del list[2-4]</code>删除索引二到三的索引位置的元素</li>
+</ol>
+<p>实例如图所示：<br><img src="/images/loading.svg" alt="1.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/24/vPNeTQ3xD6li4hO.png"><br>结果如图所示：<br><img src="/images/loading.svg" alt="2.png" class="lazyload gif" data-src="https://i.loli.net/2019/10/24/tAeI9CY6VnqmbDh.png"></p>
+<div class="note-plugin default">
+            <p>在这里就不多加介绍列表的方法了，想了解更多直接找手册或百度。</p>
+          </div>
+<h4 id="元组"><span class="heading-link">元组</span></h4><p>tuple = (val1,val2,val3,val4)</p>
+<div class="note-plugin success">
+            <p>Python中的元组与列表类似，不同之处在于元组不可修改，类似于稳定版的列表，因此在列表中可以使用的增删改的方法在元组中是不可以使用的，但是可以对元组中的元素进行索引，和列表类似</p>
+          </div>
+<!-- more -->
+<ol>
+<li>tuple()函数可以把一个列表转化为元组，<code>t1 = [1,2,3], t2 = tuple(t1)</code></li>
+<li>在列表的函数和方法中，除append(),extend(),insert(),pop(),remove()之外，其他都适用，详细见手册。</li>
+</ol>
+<h4 id="字典"><span class="heading-link">字典</span></h4><p>dict = {key1:val1,key2:val2}，</p>
+<ol>
+<li>字典Python语言中唯一的映射类型</li>
+<li>字典中的元素必须时键值对的形式；</li>
+<li>键(key)不可以重复，而值(value)可以重复；</li>
+<li>键不可变，无法修改；值可以修改，可以是任何对象；</li>
+</ol>
+<ul>
+<li>列表新增</li>
+</ul>
+<ol>
+<li>通过这种方式插入元素，元素默认插入在最后一个位置<code>d[key] = value</code>，如果字典存在这个键，则视为修改对应的键值。</li>
+<li>使用update()方法来实现添加多个元素</li>
+</ol>
+<ul>
+<li>列表删除</li>
+</ul>
+<ol>
+<li>使用del关键字<code>del d[key]</code><div class="note-plugin warning">
+            <p>需要注意的是，虽然字典是用大括号，但删除时依然使用中括号。</p>
+          </div>
+
+</li>
+</ol>
+<h4 id="集合"><span class="heading-link">集合</span></h4><p>set = {val1,val2,val3,val4}</p>
+<ol>
+<li>集合是一个无序不重复元素级</li>
+<li>集合分为可变集合(set)和不可变集合（forzenset）</li>
+</ol>
+<ul>
+<li>遍历集合</li>
+</ul>
+<ol>
+<li>集合本身是无序的，所以不能为集合创建索引或切片，<strong>只能循环遍历</strong></li>
+<li>使用in，not in来访问或判断集合</li>
+</ol>
+<ul>
+<li>集合添加</li>
+</ul>
+<ol>
+<li>add(): <code>集合对象名.add(元素)</code></li>
+<li>update(): <code>集合对象名.update(元素)</code></li>
+</ol>
+<ul>
+<li>集合删除:</li>
+</ul>
+<ol>
+<li>remove(): <code>集合对象名.remove([要删除的元素])</code>,<strong>如果该元素不存在，则报错</strong></li>
+<li>discard(): <code>集合对象名.discard([要删除的元素])</code>,<strong>如果该元素不存在，不会报错</strong></li>
+<li>pop(): <code>集合对象名.pop()</code></li>
+</ol>
+</div><footer class="post-footer"><div class="post-end"><span>------ </span><span>End of text, thank you for reading</span><span> ------</span></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-author-name">Author: </span><span class="post-copyright-author-value"><a href="http://yoursite.com">FirMoveBrick</a></span></div><div class="post-copyright-link"><span class="post-copyright-link-name">Link: </span><span class="post-copyright-link-value"><a href="http://yoursite.com/2019/10/24/py-list/">http://yoursite.com/2019/10/24/py-list/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-notice-name">Copyright: </span><span class="post-copyright-notice-value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="http://yoursite.com/tags/Python/">Python</a></span><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="http://yoursite.com/tags/dataTpye/">dataTpye</a></span></div><nav class="paginator"><div class="paginator-post"><div class="paginator-post-next"><a class="paginator-post-next__a" href="/2019/10/23/Python/"><span>Python带你绘制函数</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python基本数据结构"><span class="toc-number">1.</span> <span class="toc-text">Python基本数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#列表"><span class="toc-number">1.1.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#元组"><span class="toc-number">1.2.</span> <span class="toc-text">元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字典"><span class="toc-number">1.3.</span> <span class="toc-text">字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集合"><span class="toc-number">1.4.</span> <span class="toc-text">集合</span></a></li></ol></li></ol></div></section><!-- ov = overview --><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/favicon-32x32.png" alt="avatar"></div><p class="sidebar-ov-author__p">PHP is the best language in the world</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://github.com/" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-github"></i></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">7</div><div class="sidebar-ov-state__a--name">Archives</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">3</div><div class="sidebar-ov-state__a--name">Categories</div></a><a class="sidebar-ov-state__a tags" href="/tags/"><div class="sidebar-ov-state__a--count">9</div><div class="sidebar-ov-state__a--name">Tags</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span>You have read </span><span class="sidebar-reading-info-num">0</span></div><div class="sidebar-reading-line"></div></div></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart footer-icon"></span><span>FirMoveBrick.</span></div><div><span>Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.5.2.</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-rocket"></i></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="/js/utils.js?v=1.5.2"></script><script src="/js/stun-boot.js?v=1.5.2"></script><script src="/js/scroll.js?v=1.5.2"></script><script src="/js/header.js?v=1.5.2"></script><script src="/js/sidebar.js?v=1.5.2"></script></body></html>
